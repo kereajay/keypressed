@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        #one {
+            width: 400px;
+            height: 70px;
+            background-color: aqua;
+            text-align: center;
+            margin: auto;
+            margin-bottom: 0%;
+            border-radius: 20%;
+            /* transform: translateX(500px); */
+        }
+
+        #one p {
+            font-size: xx-large;
+            padding: 10px;
+        }
+
+        #code {
+            width: 200px;
+            height: 150px;
+            background-color: yellow;
+            margin: auto;
+            text-align: center;
+            margin-top: -5%;
+            padding-top: 0%;
+            border-radius: 50%;
+        }
+
+        #code p {
+            font-size: 3cm;
+            /* padding: 10px;   */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="one">
+        <p id="onea">Press any key</p>
+    </div>
+    <div id="code">
+        <p id="twob">00</p>
+    </div>
+    <script>
+        document.body.addEventListener('keydown', (ev) => {
+
+            let val = ev.key;
+            let code = ev.keyCode;
+            let one = document.getElementById('onea');
+            one.style.color = 'orange'
+            one.innerText = "you pressed" + " " + val;
+            let two = document.getElementById('twob');
+            two.innerText = code;
+            if (ev.keyCode == 32) {
+                one.innerText = "you pressed space";
+
+            }
+
+        })
+       
+    </script>
+</body>
+
+</html>
